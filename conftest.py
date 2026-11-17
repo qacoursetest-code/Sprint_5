@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait as WW
 
 from helpers import generate_email
+from constants import SITE_URL
 from locators import RegistrationLocators, MainPageLocators, LoginLocators
 
 
@@ -14,7 +15,7 @@ def driver():
 
     try:
         browser.set_window_size(1280, 900)
-        browser.get("https://qa-desk.education-services.ru")
+        browser.get(SITE_URL)
         yield browser
     finally:
         browser.quit()

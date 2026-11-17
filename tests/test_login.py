@@ -1,6 +1,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait as WW
 
+from constants import SITE_URL
 from locators import (
     RegistrationLocators,
     LoginLocators,
@@ -71,7 +72,7 @@ class TestLogin:
         )
 
         expected = (
-            "https://qa-desk.education-services.ru/",
+            SITE_URL,
             True,
             True,
             "User",

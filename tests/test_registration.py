@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait as WW
 
 from locators import RegistrationLocators, MainPageLocators
 from helpers import generate_email
+from constants import SITE_URL
 
 
 class TestRegistration:
@@ -91,7 +92,7 @@ class TestRegistration:
             user_name.text,
         )
         expected = (
-            "https://qa-desk.education-services.ru/",
+            SITE_URL,
             True,
             True,
             "User"
